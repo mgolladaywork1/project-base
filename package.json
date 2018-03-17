@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mgolladaywork1/project-base/issues"
   },
-  "homepage": "https://github.com/mgolladaywork1/project-base#readme"
+  "homepage": "https://github.com/mgolladaywork1/project-base#readme",
+  "devDependencies": {
+    "webpack": "^4.1.1"
+  }
 }
