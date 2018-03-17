@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/mgolladaywork1/project-base#readme",
   "devDependencies": {
-    "webpack": "^4.1.1"
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
   },
   "dependencies": {
     "lodash": "^4.17.5"
