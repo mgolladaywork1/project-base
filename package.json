@@ -2,14 +2,14 @@
   "name": "project-base",
   "sideEffects": [
     "*.css"
-  ],   
+  ],
   "version": "1.0.0",
   "description": "webpack project\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dbase project",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --colors",
+    "build": "webpack --config webpack.prod.js --colors",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,10 +29,12 @@
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.1.0",
     "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1",
     "webpack-manifest-plugin": "^2.0.0-rc.2",
+    "webpack-merge": "^4.1.2",
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
