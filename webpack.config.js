@@ -5,8 +5,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
   entry: {
-    app: './src/index.js',
-    another: './src/another-module.js'
+    index: './src/index.js',
   }, 
   devtool: 'inline-source-map',
   devServer: {
@@ -16,11 +15,12 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'Code Splitting'
-    }),
-    new ManifestPlugin()
+    })
   ],
   output: {
     filename: '[name].bundle.js',
+    chunkFilename: '[name].chunk.js',
     path: path.resolve(__dirname, 'dist')
-  }
+  },
+  mode: "production"
 };
