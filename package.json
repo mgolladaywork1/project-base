@@ -1,5 +1,8 @@
 {
   "name": "project-base",
+  "sideEffects": [
+    "*.css"
+  ],   
   "version": "1.0.0",
   "description": "webpack project\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dbase project",
   "main": "index.js",
