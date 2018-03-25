@@ -6,7 +6,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 module.exports = {
   entry: {
     app: './src/index.js',
-    print: './src/print.js'
+    another: './src/another-module.js'
   }, 
   devtool: 'inline-source-map',
   devServer: {
@@ -15,7 +15,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Output Management'
+      title: 'Code Splitting'
     }),
     new ManifestPlugin()
   ],
