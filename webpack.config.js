@@ -5,10 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/index.js',
-    vendor: [
-      'lodash'
-    ]
+    main: './src/index.js'
   },
   optimization: {
     splitChunks: {
