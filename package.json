@@ -4,9 +4,9 @@
   "description": "Starter for Node / Webpack / Typescript projects.",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --open --config webpack.dev.js",
     "build-dev": "webpack --config webpack.dev.js --mode development",
     "build-prd": "webpack --config webpack.prod.js --mode production",
-    "start": "node ./dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +28,7 @@
     "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.2",
     "webpack-manifest-plugin": "^2.0.0-rc.2",
     "webpack-merge": "^4.1.2"
   }
