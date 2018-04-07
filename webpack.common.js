@@ -4,8 +4,20 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
   entry: {
-    app: './src/index.js'
+    app: './src/index.ts'
   }, 
+  module: {
+    rules: [
+      {
+        test: /\.ts?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/  
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.ts', '.js' ]   
+  },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new ManifestPlugin()
