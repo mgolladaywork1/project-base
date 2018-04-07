@@ -10,7 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/mgolladaywork1/project-base.git"
   },
-  "author": "Jeff and Miu",
+  "author": "Miu Golladay",
+  "contributors": [ "Miu Golladay", "Jeff Weyer"],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mgolladaywork1/project-base/issues"
