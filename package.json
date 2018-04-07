@@ -4,8 +4,8 @@
   "description": "Starter for Node / Webpack / Typescript projects.",
   "main": "index.js",
   "scripts": {
-    "build-dev": "webpack --mode development",
-    "build-prd": "webpack --mode production",
+    "build-dev": "webpack --config webpack.dev.js --mode development",
+    "build-prd": "webpack --config webpack.prod.js --mode production",
     "start": "node ./dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,8 +25,10 @@
   "homepage": "https://github.com/mgolladaywork1/project-base#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
+    "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14",
-    "webpack-manifest-plugin": "^2.0.0-rc.2"
+    "webpack-manifest-plugin": "^2.0.0-rc.2",
+    "webpack-merge": "^4.1.2"
   }
 }
