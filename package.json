@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/mgolladaywork1/project-base#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
     "webpack": "^4.5.0",
-    "webpack-cli": "^2.0.14"
+    "webpack-cli": "^2.0.14",
+    "webpack-manifest-plugin": "^2.0.0-rc.2"
   }
 }
