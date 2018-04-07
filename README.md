@@ -1,0 +1,1 @@
+Starter for Node / Webpack / Typescript projects.
