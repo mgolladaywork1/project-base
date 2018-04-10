@@ -22,7 +22,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'STarter Project'
+      title: 'Starter Project'
     }),    
     new ManifestPlugin()
   ],

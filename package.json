@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build-dev": "webpack --config webpack.dev.js --mode development",
     "build-prd": "webpack --config webpack.prod.js --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json"
   },
   "repository": {
     "type": "git",
@@ -24,9 +24,14 @@
   },
   "homepage": "https://github.com/mgolladaywork1/project-base#readme",
   "devDependencies": {
+    "@types/jasmine": "^2.8.6",
     "clean-webpack-plugin": "^0.1.19",
     "html-webpack-plugin": "^3.2.0",
+    "jasmine": "^3.1.0",
+    "jasmine-core": "^3.1.0",
     "ts-loader": "^4.1.0",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.9.1",
     "typescript": "^2.8.1",
     "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.5.0",
