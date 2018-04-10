@@ -15,4 +15,8 @@ export class Test321 {
   test003(): number {
     return 1;  
   }
+
+  test004(): object {
+    return {a: 15, b:25 }
+  }
 }
