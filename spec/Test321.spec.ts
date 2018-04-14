@@ -41,6 +41,45 @@ describe("Test321", () => {
 
   });
   //match, defined, undefined, truthy, falsy...
+  it("toMatch a regular expressions", () => {
+    let address = '1234 Main St. Irvine, CA';
+    expect(address).toMatch(/CA/);
+    expect(address).toMatch('Irvine');
+    expect(address).not.toMatch('NY');
+    expect(address).toContain('1234');
+  });
+  xit("toBeDefined' and undefined", () => {
+    let a = {
+      firstname: 'John',
+      lastname: 'Smith',
+      middlename: ''
+    };
+    expect(a.firstname).toBeDefined();
+    expect(a.middlename).not.toBeNull();
+    expect(a.lastname.length).toBeGreaterThan(a.middlename.length);
+  });
+
   //compares: contain, less, greater than...
   //foreach, before, after,
+  describe("My spy", () => {
+    let tom: { setHouse: Function} ;
+    let jerry: string = null;
+
+    beforeEach(function() {
+      tom = {
+        setHouse: function(value: string) : string {
+          jerry = value;
+          return jerry;
+        }
+      };
+      spyOn(tom, 'setHouse');
+
+      tom.setHouse('A Mouse');
+      tom.setHouse('A Rat');
+    });
+
+    it("tracks that the spy was called", function() {
+      expect(tom.setHouse).not.toHaveBeenCalled();
+    });
+  });
 });
