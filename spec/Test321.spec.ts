@@ -79,7 +79,7 @@ describe("Test321", () => {
     });
 
     it("tracks that the spy was called", function() {
-      expect(tom.setHouse).not.toHaveBeenCalled();
+      expect(tom.setHouse).toHaveBeenCalled();
     });
   });
 });
