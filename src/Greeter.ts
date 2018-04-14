@@ -1,10 +1,9 @@
+export class Greeter {
+    constructor(public message: string) {
 
-    export class Greeter {
-        constructor(public message: string) {
- 
-        }
-        greet(): string {
-            return "Hello " + this.message;
-        }
     }
-    
+
+    public greet(): string {
+        return "Hello " + this.message;
+    }
+}
