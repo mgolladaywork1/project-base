@@ -23,7 +23,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new TSLintPlugin({
-      files: ['./src/**/*.ts']
+      files: ['./src/**/*.ts', './spec/**/*.spec.ts']
     }),
     new HtmlWebpackPlugin({
       title: 'Starter Project'
