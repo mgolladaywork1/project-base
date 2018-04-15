@@ -2,28 +2,32 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TSLintPlugin = require('tslint-webpack-plugin');
 
 module.exports = {
   entry: {
     app: './src/index.ts'
-  }, 
+  },
   module: {
     rules: [
       {
         test: /\.ts?$/,
         use: 'ts-loader',
-        exclude: /node_modules/  
+        exclude: /node_modules/
       }
     ]
   },
   resolve: {
-    extensions: ['.ts', '.js' ]   
+    extensions: ['.ts', '.js']
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
+    new TSLintPlugin({
+      files: ['./src/**/*.ts']
+    }),
     new HtmlWebpackPlugin({
       title: 'Starter Project'
-    }),    
+    }),
     new ManifestPlugin()
   ],
   output: {
