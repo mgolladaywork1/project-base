@@ -62,13 +62,13 @@ describe("Test321", () => {
   // compares: contain, less, greater than...
   // foreach, before, after,
   describe("My spy", () => {
-    let tom: { setHouse: (value: string) => string} ;
+    let tom: { setHouse: (value: string, value2?: string) => string };
     let jerry: string = null;
 
     // tslint:disable-next-line:only-arrow-functions
-    beforeEach(function() {
+    beforeEach(() => {
       tom = {
-        setHouse(value: string): string {
+        setHouse(value: string, value2?: string): string {
           jerry = value;
           return jerry;
         }
@@ -76,11 +76,35 @@ describe("Test321", () => {
       spyOn(tom, "setHouse");
 
       tom.setHouse("A Mouse");
-      tom.setHouse("A Rat");
+      tom.setHouse("A Rat", "A Mouse");
     });
 
     it("tracks that the spy was called", () => {
       expect(tom.setHouse).toHaveBeenCalled();
     });
+
+    it("tracks argument of its call to be A Mouse", () => {
+      expect(tom.setHouse).toHaveBeenCalledWith("A Mouse");
+    });
+
+    it("tracks argument of its call to be 2 arguments", () => {
+      expect(tom.setHouse).toHaveBeenCalledWith("A Rat", "A Mouse");
+    });
+
+    it("tracks argument of its call to be 2 arguments", () => {
+      expect(tom.setHouse).not.toHaveBeenCalledWith("A Mouse", "Jerry");
+    });
+
+    it("stops all execution on a function", () => {
+      expect(jerry).toBeNull();
+    });
+  });
+
+  describe("A spy, when  configured to call through", () => {
+    beforeEach(() => {
+      console.log("beforeEach");
+    });
+
+    // spyOn(foo, "getBar").and.callThrough();
   });
 });

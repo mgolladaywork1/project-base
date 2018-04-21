@@ -8,7 +8,14 @@
         "trailing-comma": [
             false
         ],
-        "no-console": false
+        "no-console": false,
+        "object-literal-sort-keys": false,
+        "quotemark": [
+            false,
+            "single",
+            "avoid-escape",
+            "avoid-template"
+        ]
     },
     "rulesDirectory": []
 }
